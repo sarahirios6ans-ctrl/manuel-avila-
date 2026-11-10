@@ -1,0 +1,6 @@
+{
+  "name": "Manuel Ávila Camacho: Biografía Narrada",
+  "description": "Documental audiovisual interactivo sobre la biografía de Manuel Ávila Camacho con narración por voz, imágenes históricas de archivo, subtítulos sincronizados y contexto de la Segunda Guerra Mundial y la Unidad Nacional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

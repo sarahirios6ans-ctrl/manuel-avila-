@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Ken Burns camera motions */
+@keyframes kenburns-pan-zoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1.14) translate(1.5%, -0.5%);
+  }
+}
+
+@keyframes kenburns-zoom-out {
+  0% {
+    transform: scale(1.15) translate(-1%, 1%);
+  }
+  50% {
+    transform: scale(1.07) translate(1%, -0.5%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes film-grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-1%, -1%); }
+  20% { transform: translate(1%, 1%); }
+  30% { transform: translate(-2%, 1%); }
+  40% { transform: translate(2%, -1%); }
+  50% { transform: translate(-1%, 2%); }
+  60% { transform: translate(1%, -2%); }
+  70% { transform: translate(2%, 1%); }
+  80% { transform: translate(-1%, -1%); }
+  90% { transform: translate(1%, 2%); }
+}
+
+@keyframes pulse-bar {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+
+.animate-kenburns-1 {
+  animation: kenburns-pan-zoom 22s ease-in-out infinite alternate;
+}
+
+.animate-kenburns-2 {
+  animation: kenburns-zoom-out 25s ease-in-out infinite alternate;
+}
+
+.film-flicker {
+  animation: film-grain 0.6s steps(5) infinite;
+}
+
+/* Custom historical archival grain overlay */
+.archival-grain {
+  background-image: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%),
+    radial-gradient(rgba(214, 180, 110, 0.08) 1px, transparent 1px);
+  background-size: 100% 100%, 3px 3px;
+}
+
+/* Sepia newsreel look */
+.vintage-projector {
+  filter: sepia(0.28) contrast(1.12) brightness(0.95);
+}
